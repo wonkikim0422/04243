@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="assembly">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0276418278157166 -0.472599056033966 0.0312550060354526"
+        rpy="0 0 0" />
+      <mass
+        value="2.26299534521544" />
+      <inertia
+        ixx="0.0236090944163617"
+        ixy="3.73909220149501E-19"
+        ixz="3.29690604315055E-08"
+        iyy="0.0191899669560079"
+        iyz="-1.27406422046969E-05"
+        izz="0.0424983502674055" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assembly/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assembly/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Front">
+    <inertial>
+      <origin
+        xyz="0.743266133544045 0.0286595649626295 -0.00572671894259557"
+        rpy="0 0 0" />
+      <mass
+        value="0.264794942457609" />
+      <inertia
+        ixx="0.000180912937505476"
+        ixy="3.60360586378347E-08"
+        ixz="1.27547742425514E-05"
+        iyy="0.000340749130203072"
+        iyz="4.49256608414961E-08"
+        izz="0.00021305693604264" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assembly/meshes/Front.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assembly/meshes/Front.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="F"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="Front" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="0"
+      velocity="7" />
+  </joint>
+  <link
+    name="Left">
+    <inertial>
+      <origin
+        xyz="0.298882898843663 0.29098420988939 -0.00796542206660854"
+        rpy="0 0 0" />
+      <mass
+        value="0.234499143777188" />
+      <inertia
+        ixx="0.000143665371621267"
+        ixy="1.83610799997035E-07"
+        ixz="-1.10937110486876E-08"
+        iyy="0.000262556797814612"
+        iyz="-2.18056513365289E-08"
+        izz="0.000148285986716905" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assembly/meshes/Left.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assembly/meshes/Left.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="L"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="Left" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="0"
+      velocity="7" />
+  </joint>
+  <link
+    name="Right">
+    <inertial>
+      <origin
+        xyz="0.298877252811855 -0.235853070165976 -0.00796377046701283"
+        rpy="0 0 0" />
+      <mass
+        value="0.234499143777188" />
+      <inertia
+        ixx="0.000143678725207271"
+        ixy="-1.99274169514913E-07"
+        ixz="-1.43895535404509E-08"
+        iyy="0.000262556797814612"
+        iyz="3.57221779927153E-08"
+        izz="0.0001482726331309" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assembly/meshes/Right.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://assembly/meshes/Right.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="R"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="Right" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      effort="0"
+      velocity="7" />
+  </joint>
+</robot>
